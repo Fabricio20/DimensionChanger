@@ -1,7 +1,0 @@
-name: DimensionChanger
-version: 1.5.4
-author: Fabricio20
-main: me.Fabricio20.SpigotMC.Main
-commands:
-  dc:
-    description: DimensionChanger
