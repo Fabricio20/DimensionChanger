@@ -8,6 +8,8 @@ import net.notfab.spigot.simpleconfig.spigot.SpigotConfigManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 
 public class DimensionChanger extends JavaPlugin {
 
@@ -44,10 +46,17 @@ public class DimensionChanger extends JavaPlugin {
      *
      * @return SimpleConfig.
      */
+    @SuppressWarnings("ResultOfMethodCallIgnored")
     private SimpleConfig setupConfig() {
-        File file = new File(this.getDataFolder(), "config.yml");
+        File file = new File("config.yml");
         if (!file.exists()) {
-            this.simpleConfigManager.copyResource(getClass().getResourceAsStream("/config.yml"), file);
+            try {
+                file.createNewFile();
+                InputStream stream = getClass().getResourceAsStream("/config.yml");
+                this.simpleConfigManager.copyResource(stream, file);
+            } catch (IOException e) {
+                getLogger().severe(e.getMessage());
+            }
         }
         return this.simpleConfigManager.getNewConfig("config.yml");
     }
