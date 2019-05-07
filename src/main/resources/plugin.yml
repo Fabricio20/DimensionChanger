@@ -1,7 +1,11 @@
+main: net.notfab.dimensionchanger.DimensionChanger
+version: 2.0
 name: DimensionChanger
-version: 1.5.4
 author: Fabricio20
-main: me.Fabricio20.SpigotMC.Main
+api-version: 1.13
+load: POSTWORLD
+description: >
+  DimensionChanger allows you to change the color of the sky of your worlds.
 commands:
   dc:
     description: DimensionChanger

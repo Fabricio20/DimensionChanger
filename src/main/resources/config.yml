@@ -1,0 +1,20 @@
+# ------------------------------------------------------------------------------------------------------------------- #
+# Welcome to the configuration file for DimensionChanger                                                              #
+#                                                                                                                     #
+# - The contents of this project are licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0       #
+# International. Please read the information linked below before you attempt to use this project or it's contents to  #
+# make sure you are abiding by it's terms.                                                                            #
+# - https://creativecommons.org/licenses/by-nc-sa/4.0/                                                                #
+#                                                                                                                     #
+# It's still YAML, so make sure you are not using tabs as it can invalidate the configuration.                        #
+# When in doubt, paste this config on a parser like http://www.yamllint.com                                           #
+#                                                                                                                     #
+#
+# ------------------------------------------------------------------------------------------------------------------- #
+#
+# Permission to use the command.
+Permission: DimensionChanger.Change
+# Error message for when the user has no permission.
+NoPerm: "&cYou don't have enough perms to use this sir!"
+# Dimension storage (per worldName - case sensitive)
+Dimensions:
